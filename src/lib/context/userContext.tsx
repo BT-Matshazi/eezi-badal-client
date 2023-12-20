@@ -31,7 +31,7 @@ export function UserContextProvider({ children }: { children: ReactNode }) {
         setUser(data);
       });
     }
-  }, []);
+  }, [user]);
 
   return (
     <UserContext.Provider value={{ user, setUser }}>
