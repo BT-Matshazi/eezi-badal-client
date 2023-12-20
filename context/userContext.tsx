@@ -27,9 +27,11 @@ export function UserContextProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (!user) {
-      axios.get("/profile").then(({ data }) => {
-        setUser(data);
-      });
+      axios
+        .get("https://lionfish-app-z7ifi.ondigitalocean.app/profile")
+        .then(({ data }) => {
+          setUser(data);
+        });
     }
   }, [user]);
 

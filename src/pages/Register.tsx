@@ -18,12 +18,15 @@ export default function Register() {
     const { firstName, lastName, email, password } = data;
     console.log(data);
     try {
-      const { data } = await axios.post("/register", {
-        firstName,
-        lastName,
-        email,
-        password,
-      });
+      const { data } = await axios.post(
+        "https://lionfish-app-z7ifi.ondigitalocean.app/register",
+        {
+          firstName,
+          lastName,
+          email,
+          password,
+        }
+      );
       if (data.error) {
         toast.error(data.error);
       } else {

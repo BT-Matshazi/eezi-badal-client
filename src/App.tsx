@@ -6,7 +6,7 @@ import axios from "axios";
 import { Toaster } from "react-hot-toast";
 import { UserContextProvider } from "../context/userContext";
 
-axios.defaults.baseURL = import.meta.env.BASEURL;
+// axios.defaults.baseURL = import.meta.env.BASEURL;
 axios.defaults.withCredentials = true;
 
 function App() {
