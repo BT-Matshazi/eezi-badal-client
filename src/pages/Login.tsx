@@ -15,13 +15,10 @@ export default function Login() {
     const { email, password } = data;
     console.log(data);
     try {
-      const { data } = await axios.post(
-        "https://lionfish-app-z7ifi.ondigitalocean.app/login",
-        {
-          email,
-          password,
-        }
-      );
+      const { data } = await axios.post("/login", {
+        email,
+        password,
+      });
       if (data.error) {
         toast.error(data.error);
       } else {

@@ -4,9 +4,9 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import axios from "axios";
 import { Toaster } from "react-hot-toast";
-import { UserContextProvider } from "../context/userContext";
+import { UserContextProvider } from "./lib/context/userContext";
 
-// axios.defaults.baseURL = import.meta.env.BASEURL;
+axios.defaults.baseURL = "https://lionfish-app-z7ifi.ondigitalocean.app"; //import.meta.env.BASEURL;
 axios.defaults.withCredentials = true;
 
 function App() {
